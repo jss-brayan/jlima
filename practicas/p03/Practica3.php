@@ -116,3 +116,24 @@ unset($c);
 unset($z);
 
 ?>
+
+<?php
+//Ejercicio 3
+
+function Mostrar1()
+{
+global $a, $b, $c, $z;
+echo "$a <br>";
+echo "$b <br>";
+echo "$c <br>";
+print_r($z);
+}
+
+Mostrar();
+
+unset($a);
+unset($b);
+unset($c);
+unset($z);
+
+?>
