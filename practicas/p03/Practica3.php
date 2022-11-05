@@ -68,3 +68,51 @@ unset($c);
 
 
 ?>
+
+<?php
+//Ejercicio 3
+
+
+$a = “PHP5”;
+echo "$a";
+//PHP5
+
+$z[] = &$a; 
+//Al no incluir datos entre corchetes se asigna a 0
+print_r($z);
+//Array
+//(
+//    [0] => PHP5
+//)
+
+$b = "5a version de PHP";
+echo "$b";
+//5a version de PHP
+
+$c = intval($b)*10;
+echo "$c";
+//No es posible la operacion por diferencia de variables
+// Modificamos el tipo de variable asignando solo el numero entero y continuamos
+//50
+
+$a .= $b;
+echo "$a";
+//PHP55a version de PHP
+
+intval($b) *= $c;
+echo "$b";
+//No es posible la operacion por diferencia de variables
+// Modificamos el tipo de variable asignando solo el numero entero y continuamos
+//250
+
+$z[0] = “MySQL”;
+print_r($z[0]);
+//MySQL
+
+
+unset($a);
+unset($b);
+unset($c);
+unset($z);
+
+?>
