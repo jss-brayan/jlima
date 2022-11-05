@@ -89,7 +89,10 @@ $b = "5a version de PHP";
 echo "$b";
 //5a version de PHP
 
-$c = intval($b)*10;
+
+settype($b,"integer");
+$c = $b*10;
+
 echo "$c";
 //No es posible la operacion por diferencia de variables
 // Modificamos el tipo de variable asignando solo el numero entero y continuamos
@@ -99,7 +102,7 @@ $a .= $b;
 echo "$a";
 //PHP55a version de PHP
 
-intval($b) *= $c;
+$b *= $c;
 echo "$b";
 //No es posible la operacion por diferencia de variables
 // Modificamos el tipo de variable asignando solo el numero entero y continuamos
@@ -118,9 +121,9 @@ unset($z);
 ?>
 
 <?php
-//Ejercicio 3
+//Ejercicio 4
 
-function Mostrar1()
+function Mostrar()
 {
 global $a, $b, $c, $z;
 echo "$a <br>";
@@ -135,5 +138,22 @@ unset($a);
 unset($b);
 unset($c);
 unset($z);
+
+?>
+
+<?php
+//Ejercicio 5
+
+$a = "7 personas";
+echo "$a <br>";
+settype($a, "integer");
+$b = $a ;
+echo "$b <br>";
+$a = “9E3”;
+echo "$a <br>";
+settype($a, "double");
+$c = (double) $a;
+echo "$c <br>";
+
 
 ?>
