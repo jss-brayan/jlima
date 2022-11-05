@@ -224,4 +224,6 @@ unset($f);
 <?php
 //Ejercicio 7
 
+echo $_SERVER['SERVER_NAME'];
+
 ?>
