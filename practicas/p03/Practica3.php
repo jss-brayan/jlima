@@ -133,6 +133,13 @@ print_r($z);
 }
 
 Mostrar();
+//MySQL//
+//250
+//50
+//Array
+//(
+//    [0] => MySQL
+//)
 
 unset($a);
 unset($b);
@@ -146,14 +153,75 @@ unset($z);
 
 $a = "7 personas";
 echo "$a <br>";
+//7 personas
 settype($a, "integer");
 $b = $a ;
 echo "$b <br>";
-$a = “9E3”;
+//7
+$a = "9E3";
 echo "$a <br>";
+//9E3
 settype($a, "double");
 $c = (double) $a;
 echo "$c <br>";
+//9000
 
+unset($a);
+unset($b);
+unset($c);
+
+
+?>
+
+<?php
+//Ejercicio 6
+
+$a = "0";
+$b = "TRUE";
+$c = FALSE;
+$d = ($a OR $b);
+$e = ($a AND $c);
+$f = ($a XOR $b);
+
+var_dump(is_bool($a));
+//bool(false)
+var_dump(is_bool($b));
+//bool(false)
+var_dump(is_bool($c));
+//bool(true)
+var_dump(is_bool($d));
+//bool(true)
+var_dump(is_bool($e));
+//bool(true)
+var_dump(is_bool($f));
+//bool(true)
+
+
+
+echo 'a:        '.(boolval($a) ? 'true' : 'false')."\n";
+//a:        false
+echo 'b:        '.(boolval($b) ? 'true' : 'false')."\n";
+//b:        true
+echo 'c:        '.(boolval($c) ? 'true' : 'false')."\n";
+//c:        false
+echo 'd:        '.(boolval($d) ? 'true' : 'false')."\n";
+//d:        true
+echo 'e:        '.(boolval($e) ? 'true' : 'false')."\n";
+//e:        false
+echo 'f:        '.(boolval($f) ? 'true' : 'false')."\n";
+//f:        true
+
+unset($a);
+unset($b);
+unset($c);
+unset($d);
+unset($e);
+unset($f);
+
+?>
+
+
+<?php
+//Ejercicio 7
 
 ?>
