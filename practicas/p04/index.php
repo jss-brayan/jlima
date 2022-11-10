@@ -84,7 +84,7 @@
         <p>
             R:
             <?php
-            // AQUÍ VA EL CÓDIGO DE SOLUCIÓN
+            // AQUÍ VA EL CÓDIGO DE SOLUCIÓN EJERCICIO 4
             
             echo "<br>";
             echo('<pre>');
