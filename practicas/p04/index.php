@@ -40,7 +40,7 @@
         <p>
             R:
             <?php
-            // AQUÍ VA EL CÓDIGO DE SOLUCIÓN
+            // AQUÍ VA EL CÓDIGO DE SOLUCIÓN EJERCICIO 2
                 echo '<br>';
                 $matriz;
                 $ite=0;
