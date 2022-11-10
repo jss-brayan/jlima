@@ -95,7 +95,7 @@
     </div>
     <div>
        
-        <h3>Ejercicio 5</h3>
+        <h3>Ejercicio 5 SOLUCIONADO</h3>
         <p>
             Usar las variables <strong>$edad</strong> y <strong>$sexo</strong> en una instrucción if para identificar una persona de sexo "femenino", 
             cuya edad oscile entre los 18 y 35 años y mostrar un mensaje de bienvenida apropiado. Por ejemplo:
