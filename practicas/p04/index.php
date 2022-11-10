@@ -60,7 +60,7 @@
         <p>
             R:
             <?php
-            // AQUÍ VA EL CÓDIGO DE SOLUCIÓN
+            // AQUÍ VA EL CÓDIGO DE SOLUCIÓN EJERCICIO 3
             if (!empty($_GET['dado'])) {
                 $dado = $_GET['dado'];
                 echo multiploaleatorio($dado);
