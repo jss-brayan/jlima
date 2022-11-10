@@ -131,7 +131,7 @@
             </form>
         </p>
     </div>
-    <h3>Ejercicio 6</h3>
+    <h3>Ejercicio 6 SOLUCIONADO</h3>
         <p>Crea en código duro un arreglo asociativo que sirva para registrar el parque vehicular de
         una ciudad. Cada vehículo debe ser identificado por: <br></p>
         <p>
