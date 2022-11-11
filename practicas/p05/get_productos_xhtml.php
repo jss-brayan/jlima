@@ -1,53 +1,78 @@
-<?php
-    //header("Content-Type: application/json; charset=utf-8"); 
-    $data = array();
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
 
-	if(isset($_GET['tope']))
-    {
-		$tope = $_GET['tope'];
-    }
-    else
-    {
-        die('Parámetro "tope" no detectado...');
-    }
+    <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>    
+            <title>Practica 5</title>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></link>
+    </head>
+    <body>
+    
 
-	if (!empty($tope))
-	{
-		/** SE CREA EL OBJETO DE CONEXION */
-		@$link = new mysqli('localhost', 'root', 'Password', 'marketzone');
-        /** NOTA: con @ se suprime el Warning para gestionar el error por medio de código */
+        <p>
+            <?php
+                //header("Content-Type: application/json; charset=utf-8"); 
+                $data = array();
 
-		/** comprobar la conexión */
-		if ($link->connect_errno) 
-		{
-			die('Falló la conexión: '.$link->connect_error.'<br/>');
-			//exit();
-		}
+                if(isset($_GET['tope']))
+                {
+                    $tope = $_GET['tope'];
+                }
+                else
+                {
+                    die('Parámetro "tope" no detectado...');
+                }
 
-		/** Crear una tabla que no devuelve un conjunto de resultados */
-		if ( $result = $link->query("SELECT * FROM productos WHERE unidades <= $tope") ) 
-		{
-            /** Se extraen las tuplas obtenidas de la consulta */
-            echo('<pre>');
-			print_r($row = $result->fetch_all(MYSQLI_ASSOC));
-            echo('</pre>');
+                if (!empty($tope))
+                {
+                    /** SE CREA EL OBJETO DE CONEXION */
+                    @$link = new mysqli('localhost', 'root', 'Password', 'marketzone');
+                    /** NOTA: con @ se suprime el Warning para gestionar el error por medio de código */
 
-            /** Se crea un arreglo con la estructura deseada */
-            //foreach($row as $num => $registro) {            // Se recorren tuplas
-              //  echo $num.' ';
-                //foreach($registro as $key => $value) {      // Se recorren campos
-                  //      echo $key.' ';
-                   // $data[$num][$key] = utf8_encode($value);
-               // }
-            //}
+                    /** comprobar la conexión */
+                    if ($link->connect_errno) 
+                    {
+                        die('Falló la conexión: '.$link->connect_error.'<br/>');
+                        //exit();
+                    }
 
-			/** útil para liberar memoria asociada a un resultado con demasiada información */
-			$result->free();
-		}
+                    /** Crear una tabla que no devuelve un conjunto de resultados */
+                    if ( $result = $link->query("SELECT * FROM productos WHERE unidades <= $tope") ) 
+                    {
+                        /** Se extraen las tuplas obtenidas de la consulta */
+                    // echo('<pre>');
+                        print_r($row = $result->fetch_all(MYSQLI_ASSOC));
+                        //echo('</pre>');
 
-		$link->close();
+                        /** Se crea un arreglo con la estructura deseada */
+                        //foreach($row as $num => $registro) {            // Se recorren tuplas
+                        //  echo $num.' ';
+                            //foreach($registro as $key => $value) {      // Se recorren campos
+                            //      echo $key.' ';
+                            // $data[$num][$key] = utf8_encode($value);
+                        // }
+                        //}
 
-        /** Se devuelven los datos en formato JSON */
-        echo json_encode($data, JSON_PRETTY_PRINT);
-	}
-	?>
+                        /** útil para liberar memoria asociada a un resultado con demasiada información */
+                        $result->free();
+                    }
+
+                    $link->close();
+
+                    /** Se devuelven los datos en formato JSON */
+                    echo json_encode($data, JSON_PRETTY_PRINT);
+                }
+                ?>
+            </p>
+
+            <p>
+            <a href="http://validator.w3.org/check?uri=referer">
+                <img src="http://www.w3.org/Icons/valid-xhtml11-blue" alt="Valid XHTML 1.1" height="31" width="88"/>
+            </a>
+        </p>
+    </body>
+    
+
+
+</html>
